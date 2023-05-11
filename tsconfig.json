@@ -1,0 +1,10 @@
+{
+    "include": ["src/**/*"],
+
+     "compilerOptions": {
+        "outDir": "build", // output folder 
+        "target": "ESNext", // use latest version of javascipt to transpile
+        //"noEmit": true  // do not generate an out put file 
+        "module": "commonjs"
+    }
+}
