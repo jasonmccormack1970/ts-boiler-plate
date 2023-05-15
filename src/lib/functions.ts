@@ -1,7 +1,7 @@
 // ==========================================================
-//  Higher Order Functions 
-//  A function that takes another function as an argument 
-//  A function that can return a function 
+//  Higher Order Functions
+//  A function that takes another function as an argument
+//  A function that can return a function
 // ==========================================================
 
 const nums = [1,4,77,988,99,8,666,55]
@@ -23,7 +23,7 @@ const firstNames1 = names
 
 // Quokka.js debug
 // firstNames1
-        
+
 const firstNames2 = names
         .filter(name => name.startsWith('J'))
         .filter(name => name.length <= 4)
@@ -34,7 +34,7 @@ const firstNames2 = names
 
 
 // funtion that retunrs a function
-let result: number 
+let result: number
 
 function months(resources: number){
     return resources *  12
@@ -46,24 +46,24 @@ function days(resources: number ){
     return resources * 365
 }
 
-result = months(1) 
+result = months(1)
 result = weeks(1)
 result = days(1)
 
 // Quokka.js debug
 // result
 
-// Function factory 
+// Function factory
 function setScale({ scale }: { scale: number }): Function {
     return function(resources: number){
-        if(resources < 0 || scale < 0 || !scale ||  !resources){
+        if(resources <= 0 || scale < 0 || !scale || !resources){
              throw new Error('Invalid')
          }
-        return resources * scale 
+        return resources * scale
     }
 }
 
-let effort: number 
+let effort: number
 
 let week: Function  = setScale({ scale: 11 })
 effort = week(2)
@@ -75,4 +75,4 @@ let day: Function = setScale({ scale: 365 })
 effort = day(1)
 
 // Quokka.js debug
-//effort 
+effort
