@@ -9,6 +9,6 @@ console.clear();
 console.table(workCentre1)
 console.log(opr1.name, workCentre1.isOK())
 
-
+// Higher Order Function Example
 const days: Function = setScale({ scale: 365 })
 console.log("Effort", days(2))
