@@ -54,7 +54,7 @@ result = days(1)
 // result
 
 // Function factory
-function setScale({ scale }: { scale: number }): Function {
+export function setScale({ scale }: { scale: number }): Function {
     return function(resources: number){
         if(resources <= 0 || scale < 0 || !scale || !resources){
              throw new Error('Invalid')
